@@ -41,7 +41,6 @@ if __name__ == "__main__":
     encap_to_mo = extract_mo_from_path(encap_to_mo, recomp_l3extpaths, l3extpaths_dn_encap)
 
     encap_to_mo = dict(sorted({k: list(v) for k, v in encap_to_mo.items()}.items()))
-    print(json.dumps(encap_to_mo, indent=1))
 
     table_data = [[k, "\n".join(v)] for k, v in encap_to_mo.items()]
     print(tabulate(table_data, headers=["ENCAP", "OBJECTS"], tablefmt="grid"))
