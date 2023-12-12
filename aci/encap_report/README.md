@@ -1,7 +1,7 @@
 ## encap_report
 
 #### Description
-List all encap-vlans used in the fabric.
+Reports all encap-vlans used in the fabric.
 
 ### Installation
 
