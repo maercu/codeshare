@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 #### Set environment variables
 ```bash
-export APIC_HOST=<API IP or hostname>
+export APIC_HOST=<APIC IP or hostname>
 export APIC_USER=<APIC Username>
 export APIC_PASS=<APIC Password>
 
