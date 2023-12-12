@@ -35,7 +35,11 @@ if __name__ == "__main__":
     stbinds_dn_encap = get_attrs_from_mo("fvRsPathAtt", "dn", "encap")
     recomp_stbinds = re.compile(r"(uni/tn-.*/ap-.*/epg-.*)/rspathAtt-.*")
     encap_to_mo = extract_mo_from_path(encap_to_mo, recomp_stbinds, stbinds_dn_encap)
-    
+
+    vmmports_dn_encap = get_attrs_from_mo("vmmEpPD", "epgPKey", "encap")
+    recomp_vmmports = re.compile(r"(.*)")
+    encap_to_mo = extract_mo_from_path(encap_to_mo, recomp_vmmports, vmmports_dn_encap)
+
     l3extpaths_dn_encap = get_attrs_from_mo("l3extRsPathL3OutAtt", "dn", "encap")
     recomp_l3extpaths = re.compile(r"(uni/tn-.*/out-.*)/lnodep-.*")
     encap_to_mo = extract_mo_from_path(encap_to_mo, recomp_l3extpaths, l3extpaths_dn_encap)
