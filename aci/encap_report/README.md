@@ -1,12 +1,15 @@
 ## encap_report
 
 #### Description
-List all used encap-vlans used in the fabric.
+List all encap-vlans used in the fabric.
 
 ### Installation
 
-#### Install Python virutal environment
+#### Clone repo and install Python virutal environment
 ```bash
+git clone https://github.com/maercu/codeshare.git
+cd codeshare/aci/encap_report
+
 python3 -m venv .venv
 source .venv/bin/activate
 pip install pip setuptools --upgrade
@@ -31,7 +34,7 @@ export APIC_PASS=<APIC Password>
 python encap_report.py
 ```
 
-Running the script will print the encap report as a table to the shell, in addition the report is stored in JSON format to file (```encap_report.json```) in the current working directory.
+Running the script will print the encap report as a table to the shell, in addition the report is stored in JSON format to a file (```encap_report.json```) in the current working directory.
 
 
 
